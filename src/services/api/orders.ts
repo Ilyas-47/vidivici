@@ -1,5 +1,4 @@
 import { supabase } from '@/lib/supabase';
-import type { Order } from '@/types';
 
 export const ordersApi = {
   create: async (orderData: any, items: any[], paymentData: any) => {

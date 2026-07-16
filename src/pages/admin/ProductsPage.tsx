@@ -8,8 +8,6 @@ import {
 } from '@/components/ui/table';
 import { Switch } from '@/components/ui/switch';
 import { Plus, Edit, Trash2 } from 'lucide-react';
-import { toast } from 'sonner';
-import type { Product } from '@/types';
 
 export function ProductsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,6 +1,5 @@
 import { useRef, useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import type { Product } from '@/types';
 
 interface ProductCardProps {
   product: any;

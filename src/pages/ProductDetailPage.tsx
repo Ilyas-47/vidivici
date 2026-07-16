@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Check, Star } from 'lucide-react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation } from '@tanstack/react-query';
 import { productsApi } from '@/services/api/products';
 import { reviewsApi } from '@/services/api/reviews';
 import { useCart } from '@/hooks/useCart';
@@ -24,8 +24,7 @@ export function ProductDetailPage() {
   const navigate = useNavigate();
   const { addItem } = useCart();
   const { session } = useAuth();
-  const queryClient = useQueryClient();
-
+  
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');
 
@@ -242,7 +241,7 @@ export function ProductDetailPage() {
             <div className="mb-8">
               <p className="text-xs uppercase tracking-wider mb-3 text-gray-500">Size</p>
               <div className="flex flex-wrap gap-2">
-                {product.sizes?.map(size => (
+                {product.sizes?.map((size: string) => (
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}

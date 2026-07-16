@@ -24,7 +24,7 @@ const productSchema = z.object({
   colors: z.array(z.string()).min(1, "Veuillez spécifier au moins une couleur"),
 });
 
-type ProductFormValues = z.infer<typeof productSchema>;
+
 
 export function ProductFormPage() {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export function ProductFormPage() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<ProductFormValues>({
+  } = useForm<any>({
     resolver: zodResolver(productSchema),
     defaultValues: {
       name: '',
@@ -58,7 +58,7 @@ export function ProductFormPage() {
     { name: 'Rouge', hex: '#FF0000' }
   ];
 
-  const onSubmit = async (data: ProductFormValues) => {
+  const onSubmit = async (data: any) => {
     try {
       console.log('Données soumises :', data);
       toast.success('Le produit a été enregistré (simulation pour le moment)');
@@ -96,7 +96,7 @@ export function ProductFormPage() {
                 <div className="space-y-2">
                   <Label htmlFor="name">Nom du produit <span className="text-red-500">*</span></Label>
                   <Input id="name" {...register('name')} placeholder="T-shirt d'été..." />
-                  {errors.name && <p className="text-sm text-red-500">{errors.name.message}</p>}
+                  {errors.name && <p className="text-sm text-red-500">{errors.name.message as string}</p>}
                 </div>
                 
                 <div className="space-y-2">
@@ -127,7 +127,7 @@ export function ProductFormPage() {
                 <div className="space-y-2">
                   <Label htmlFor="price">Prix (MAD) <span className="text-red-500">*</span></Label>
                   <Input id="price" type="number" step="0.01" {...register('price')} />
-                  {errors.price && <p className="text-sm text-red-500">{errors.price.message}</p>}
+                  {errors.price && <p className="text-sm text-red-500">{errors.price.message as string}</p>}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="sale_price">Prix promotionnel (MAD)</Label>
@@ -170,7 +170,7 @@ export function ProductFormPage() {
                         </label>
                     ))}
                   </div>
-                  {errors.sizes && <p className="text-sm text-red-500">{errors.sizes.message}</p>}
+                  {errors.sizes && <p className="text-sm text-red-500">{errors.sizes.message as string}</p>}
                 </div>
 
                 <div className="space-y-3">
@@ -191,7 +191,7 @@ export function ProductFormPage() {
                       </label>
                     ))}
                   </div>
-                  {errors.colors && <p className="text-sm text-red-500">{errors.colors.message}</p>}
+                  {errors.colors && <p className="text-sm text-red-500">{errors.colors.message as string}</p>}
                 </div>
               </CardContent>
             </Card>

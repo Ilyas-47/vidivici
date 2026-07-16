@@ -10,7 +10,6 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
 } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { toast } from 'sonner';
 import { Eye, Edit, Plus, Trash2 } from 'lucide-react';
 import type { Order } from '@/types';
 import { EditOrderModal } from '@/components/admin/EditOrderModal';

@@ -1,5 +1,4 @@
 import { supabase } from '@/lib/supabase';
-import type { Product } from '@/types';
 
 export const productsApi = {
   getAll: async () => {

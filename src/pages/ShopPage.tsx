@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
+import { X, SlidersHorizontal } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
-import { SlidersHorizontal, X } from 'lucide-react';
 import { ProductCard } from '@/components/ProductCard';
-import { allSizes, allColors } from '@/data/products';
 import { useProductFilters } from '@/hooks/useProductFilters';
 import { useQuery } from '@tanstack/react-query';
 import { useCategories } from '@/hooks/queries/useCategories';

@@ -267,7 +267,7 @@ export function CreateOrderModal({ open, onOpenChange }: { open: boolean; onOpen
             </div>
             
             <div className="space-y-4">
-              {items.map((item, index) => (
+              {items.map((item) => (
                 <div key={item.id} className="flex flex-wrap gap-4 items-end bg-white p-4 rounded border">
                   <div className="flex-1 min-w-[200px] space-y-2">
                     <Label>Produit</Label>

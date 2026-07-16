@@ -33,7 +33,7 @@ const productSchema = z.object({
   images: z.any().optional(),
 });
 
-type ProductFormValues = z.infer<typeof productSchema>;
+
 
 interface ProductFormModalProps {
   open: boolean;
@@ -60,7 +60,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<ProductFormValues>({
+  } = useForm<any>({
     resolver: zodResolver(productSchema),
     defaultValues: {
       name: '',
@@ -122,7 +122,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
     }
   }, [product, reset]);
 
-  const onSubmit = async (data: ProductFormValues) => {
+  const onSubmit = async (data: any) => {
     try {
       const dataToSubmit = { ...data };
       
@@ -190,7 +190,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
                   <div className="space-y-2">
                     <Label htmlFor="name">Nom du produit <span className="text-red-500">*</span></Label>
                     <Input id="name" {...register('name')} placeholder="T-shirt d'été..." />
-                    {errors.name && <p className="text-sm text-red-500">{errors.name.message}</p>}
+                    {errors.name && <p className="text-sm text-red-500">{errors.name.message as string}</p>}
                   </div>
 
                   <div className="space-y-2">
@@ -290,7 +290,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
                     <p className="text-sm text-muted-foreground">Associez une image spécifique à chaque couleur sélectionnée.</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {selectedColors.map((colorName) => {
+                    {selectedColors.map((colorName: any) => {
                       const colorInfo = availableColors.find(c => c.name === colorName);
                       return (
                         <div key={colorName} className="flex flex-col sm:flex-row sm:items-center gap-4 border rounded-md p-4 bg-muted/30">
@@ -332,7 +332,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
                   <div className="space-y-2">
                     <Label htmlFor="price">Prix (MAD) <span className="text-red-500">*</span></Label>
                     <Input id="price" type="number" step="0.01" {...register('price')} />
-                    {errors.price && <p className="text-sm text-red-500">{errors.price.message}</p>}
+                    {errors.price && <p className="text-sm text-red-500">{errors.price.message as string}</p>}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="sale_price">Prix promo (MAD)</Label>
@@ -341,7 +341,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
                   <div className="space-y-2 pt-2 border-t mt-2">
                     <Label htmlFor="stock">Stock disponible <span className="text-red-500">*</span></Label>
                     <Input id="stock" type="number" {...register('stock')} />
-                    {errors.stock && <p className="text-sm text-red-500">{errors.stock.message}</p>}
+                    {errors.stock && <p className="text-sm text-red-500">{errors.stock.message as string}</p>}
                   </div>
                 </CardContent>
               </Card>
@@ -368,7 +368,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
                           </label>
                       ))}
                     </div>
-                    {errors.sizes && <p className="text-sm text-red-500">{errors.sizes.message}</p>}
+                    {errors.sizes && <p className="text-sm text-red-500">{errors.sizes.message as string}</p>}
                   </div>
 
                   <div className="space-y-3">
@@ -389,7 +389,7 @@ export function ProductFormModal({ open, onOpenChange, product }: ProductFormMod
                         </label>
                       ))}
                     </div>
-                    {errors.colors && <p className="text-sm text-red-500">{errors.colors.message}</p>}
+                    {errors.colors && <p className="text-sm text-red-500">{errors.colors.message as string}</p>}
                   </div>
                 </CardContent>
               </Card>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Tag, Plus, Trash2, Edit, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { usePromoCodes } from '@/hooks/queries/usePromoCodes';
-import { promoCodesApi } from '@/services/api/promoCodes';
 import type { PromoCode } from '@/services/api/promoCodes';
 
 export function PromoCodesPage() {

@@ -1,6 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { brandsApi } from '@/services/api/brands';
-import type { Brand } from '@/types';
 import { toast } from 'sonner';
 
 export const useBrands = () => {

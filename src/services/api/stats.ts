@@ -32,8 +32,7 @@ export const statsApi = {
 
     // 4. Revenu total et Chart Data (7 derniers jours)
     // Pour simplifier, on récupère les commandes récentes pour générer le chart
-    const sevenDaysAgo = subDays(new Date(), 7).toISOString();
-    
+        
     // Récupérer le revenu global et les frais de livraison
     const { data: allOrders } = await supabase
       .from('orders')
