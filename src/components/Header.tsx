@@ -91,7 +91,7 @@ export function Header() {
           {/* Center - Logo */}
           <button
             onClick={() => navigate('/')}
-            className="absolute left-1/2 -translate-x-1/2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap"
+            className="absolute left-1/2 -translate-x-1/2 -ml-6 md:ml-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap"
             style={{ fontFamily: 'VidiVici' }}
           >
             VIDI VICI
