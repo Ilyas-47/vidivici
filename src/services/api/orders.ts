@@ -65,6 +65,21 @@ export const ordersApi = {
             .eq('id', sizes[0].id);
         }
       }
+      
+      // Also update the global product stock
+      const { data: productData } = await supabase
+        .from('products')
+        .select('stock')
+        .eq('id', item.product.id)
+        .single();
+        
+      if (productData) {
+        const currentGlobalStock = productData.stock || 0;
+        await supabase
+          .from('products')
+          .update({ stock: Math.max(0, currentGlobalStock - item.quantity) })
+          .eq('id', item.product.id);
+      }
     }
     
     return order;
