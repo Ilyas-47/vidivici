@@ -8,7 +8,7 @@ export function TermsPage() {
 
         <div className="space-y-12 text-[#666666]">
           <p className="leading-relaxed text-sm">
-            Welcome to Summer Shop. By accessing or using our website, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.
+            Welcome to Vidi Vici. By accessing or using our website, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.
           </p>
 
           <section>

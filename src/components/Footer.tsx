@@ -150,7 +150,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10 px-6 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="text-xs uppercase tracking-wider text-white/40">
-          &copy; 2026 Summer Shop. All rights reserved.
+          &copy; 2026 Vidi Vici. All rights reserved.
         </span>
         <span className="text-xs uppercase tracking-wider text-white/40">
           Engineered for Motion

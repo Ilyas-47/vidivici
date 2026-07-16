@@ -8,7 +8,7 @@ export function PrivacyPage() {
 
         <div className="space-y-12 text-[#666666]">
           <p className="leading-relaxed text-sm">
-            At Summer Shop, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or make a purchase.
+            At Vidi Vici, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or make a purchase.
           </p>
 
           <section>

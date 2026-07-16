@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 export function SettingsPage() {
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      shopName: 'Summer Shop',
+      shopName: 'Vidi Vici',
       contactEmail: 'contact@summershop.ma',
       currency: 'MAD',
       taxRate: 20,

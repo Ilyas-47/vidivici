@@ -153,7 +153,7 @@ export function ContactMessagesPage() {
 
               <div className="flex justify-end border-t pt-4">
                   <a
-                    href={`mailto:${selectedMessage.email}?subject=Réponse: Votre message pour Summer Shop`}
+                    href={`mailto:${selectedMessage.email}?subject=Réponse: Votre message pour Vidi Vici`}
                     className="px-4 py-2 bg-black text-white text-xs uppercase tracking-wider rounded-md hover:bg-gray-800 transition-colors"
                   >
                   Répondre par Email

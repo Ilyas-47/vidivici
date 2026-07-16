@@ -66,7 +66,7 @@ export function EthosSection() {
           </h2>
           <div className="space-y-4 text-sm leading-relaxed text-[#666666]">
             <p>
-              At Summer Shop, every garment begins with a question: how does the human
+              At Vidi Vici, every garment begins with a question: how does the human
               body move? Our design process is rooted in the study of biomechanics and
               architectural pattern making.
             </p>
