@@ -9,6 +9,7 @@ import { CartProvider } from '@/hooks/useCart';
 import { Header } from '@/components/Header';
 import { CartDrawer } from '@/components/CartDrawer';
 import { Footer } from '@/components/Footer';
+import { FloatingWidgets } from '@/components/FloatingWidgets';
 import { HomePage } from '@/pages/HomePage';
 import { ShopPage } from '@/pages/ShopPage';
 import { ProductDetailPage } from '@/pages/ProductDetailPage';
@@ -51,6 +52,7 @@ const PublicLayout = () => (
     <CartDrawer />
     <Outlet />
     <Footer />
+    <FloatingWidgets />
   </>
 );
 
