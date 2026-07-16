@@ -10,7 +10,7 @@ export function SettingsPage() {
   const { register, handleSubmit } = useForm({
     defaultValues: {
       shopName: 'Vidi Vici',
-      contactEmail: 'contact@summershop.ma',
+      contactEmail: 'contact@vidivici.ma',
       currency: 'MAD',
       taxRate: 20,
       instagram: 'https://instagram.com/summershop',

@@ -89,16 +89,16 @@ export function ContactPage() {
                 <div className="flex items-center gap-4">
                   <Mail className="text-black shrink-0" size={20} />
                   <div>
-                    <p className="text-sm font-medium text-black mb-1">Email</p>
-                    <a href="mailto:support@summershop.ma" className="text-sm hover:text-black transition-colors">support@summershop.ma</a>
+                    <h3 className="font-medium mb-1">Email</h3>
+                    <a href="mailto:support@vidivici.ma" className="text-sm hover:text-black transition-colors">support@vidivici.ma</a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <Phone className="text-black shrink-0" size={20} />
+                <div className="flex items-start gap-4 text-muted-foreground">
+                  <Phone className="w-5 h-5 mt-1" />
                   <div>
-                    <p className="text-sm font-medium text-black mb-1">Phone</p>
-                    <a href="tel:+212500000000" className="text-sm hover:text-black transition-colors">+212 5 00 00 00 00</a>
+                    <h3 className="font-medium mb-1">Téléphone</h3>
+                    <a href="tel:+212657737653" className="text-sm hover:text-black transition-colors">+212 6 57 73 76 53</a>
                   </div>
                 </div>
               </div>

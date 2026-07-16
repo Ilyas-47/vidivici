@@ -55,7 +55,7 @@ export function PrivacyPage() {
           <section>
             <h2 className="text-lg text-black font-medium mb-4">4. Your Rights</h2>
             <p className="leading-relaxed text-sm">
-              You have the right to access, correct, or delete your personal data. If you wish to exercise any of these rights, please contact us at support@summershop.ma.
+              You have the right to access, correct, or delete your personal data. If you wish to exercise any of these rights, please contact us at support@vidivici.ma.
             </p>
           </section>
 
