@@ -9,6 +9,7 @@ import { useCollections } from '@/hooks/queries/useCollections';
 import { productsApi } from '@/services/api/products';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SEO } from '@/components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,6 +101,10 @@ export function ShopPage() {
 
   return (
     <main className="pt-16 min-h-screen bg-white">
+      <SEO 
+        title="VIDI VICI | Boutique - Nos Vêtements" 
+        description="Achetez tous les vêtements possibles pour les Marocaines : débardeurs, t-shirts. VIDI VICI, votre brand de vêtements spécialisée." 
+      />
       {/* Header */}
       <div className="px-6 lg:px-12 py-8 lg:py-12 border-b border-black">
         <h1 className="text-3xl lg:text-5xl font-normal tracking-[-0.96px] mb-6">

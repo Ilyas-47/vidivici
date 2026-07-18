@@ -3,6 +3,7 @@ import { useMutation } from '@tanstack/react-query';
 import { contactsApi } from '@/services/api/contacts';
 import { Mail, Phone } from 'lucide-react';
 import { toast } from 'sonner';
+import { SEO } from '@/components/SEO';
 
 export function ContactPage() {
   const [name, setName] = useState('');
@@ -30,6 +31,10 @@ export function ContactPage() {
 
   return (
     <main className="pt-32 pb-24 px-6 min-h-screen bg-white">
+      <SEO 
+        title="VIDI VICI | Contactez-nous" 
+        description="Contactez la marque VIDI VICI. Nous sommes à votre écoute pour toute question sur nos vêtements pour Marocaines." 
+      />
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl lg:text-5xl font-normal tracking-[-1.5px] mb-12">Contact Us</h1>
 

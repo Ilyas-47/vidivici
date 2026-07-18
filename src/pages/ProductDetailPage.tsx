@@ -9,6 +9,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 import { ProductCard } from '@/components/ProductCard';
 import gsap from 'gsap';
+import { SEO } from '@/components/SEO';
 
 const colorMap: Record<string, string> = {
   'Noir': '#000000',
@@ -152,6 +153,10 @@ export function ProductDetailPage() {
 
   return (
     <main className="pt-16 min-h-screen bg-white">
+      <SEO 
+        title={`VIDI VICI | ${product.name}`} 
+        description={product.description || "Découvrez ce vêtement VIDI VICI pour les Marocaines."} 
+      />
       {/* Breadcrumb */}
       <div className="px-6 lg:px-12 py-6 border-b border-black">
         <button
